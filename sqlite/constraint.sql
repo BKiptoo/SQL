@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS students(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    date_of_birth DATE,
+    phone INTEGER NOT NULL UNIQUE,
+    marks REAL CHECK(marks>-1 AND marks<101),
+    is_married BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE students
+ALTER COLUMN pocket_money SET NOT NULL;
