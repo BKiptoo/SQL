@@ -10,5 +10,5 @@
 -- OR
 -- email = 'janedoe@example.com';
 
-SELECT * from students
-ORDER BY name ASC;
+SELECT * from students;
+-- ORDER BY name ASC;
